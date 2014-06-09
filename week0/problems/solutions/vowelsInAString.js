@@ -3,14 +3,13 @@
  * GitHub - https://github.com/ChrisChrisi
  */
 
-var allVowels = "aeiouy";
-
 var vowelsInAString = function (str) {
     if (typeof str !== "string") {
         throw new TypeError("The input should be string");
     }
 
-    var result = 0;
+    var result = 0,
+        allVowels = "aeiouy";
 
     str.toLowerCase()
         .split("")
