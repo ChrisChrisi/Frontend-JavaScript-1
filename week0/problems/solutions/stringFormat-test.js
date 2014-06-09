@@ -1,3 +1,7 @@
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+*/
 "use strict";
 
 var stringFormat = require("./stringFormat").stringFormat;
