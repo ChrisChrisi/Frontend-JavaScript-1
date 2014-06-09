@@ -1,5 +1,5 @@
 // solution here
-var is_prime = function (n) {
+var isPrime = function (n) {
     if(typeof n !== "number" || n%1 !== 0 || n<0){
         throw new TypeError("The argument should be positive integer number");
     }
@@ -22,8 +22,11 @@ var is_prime = function (n) {
     }));
 };
 
-var prime_factorization = function (num) {
-    if (is_prime(num)) {
+var primeFactorization = function (num) {
+    if(typeof num !== "number" || num%1 !== 0 || num<0){
+        throw new TypeError("The argument should be positive integer number");
+    }
+    if (isPrime(num)) {
         return [
             [num, 1]
         ]
@@ -35,7 +38,7 @@ var prime_factorization = function (num) {
         allNums = allNums.slice(1);
         allNums.unshift(2);
         allNums = allNums.filter(function (a) {
-            return (is_prime(a) && (num % a === 0));
+            return (isPrime(a) && (num % a === 0));
         });
 
         var result =[];
@@ -50,3 +53,5 @@ var prime_factorization = function (num) {
         return result;
     }
 };
+
+exports.primeFactorization = primeFactorization;
