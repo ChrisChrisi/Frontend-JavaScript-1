@@ -7,3 +7,5 @@ var isDecreasing = function(seq) {
         return (a <= seq[i+1]);
     }));
 };
+
+exports.isDecreasing = isDecreasing;
