@@ -1,8 +1,8 @@
 // solution here
 
-var is_prime = function(n) {
+var isPrime = function(n) {
     if(typeof n !== "number" || n%1 !== 0 || n<0){
-        throw new TypeError("the input should ne positive integer");
+        throw new TypeError("the input should be positive integer");
     }
     if(n === 2){
         return true;
@@ -22,9 +22,9 @@ var is_prime = function(n) {
 };
 
 
-var prime_number_of_divisors = function(n) {
+var primeNumberOfDivisors = function(n) {
     if(typeof n !== "number" || n%1 !== 0 || n<0){
-        throw new TypeError("the input should ne positive integer");
+        throw new TypeError("the input should be positive integer");
     }
     if (n === 1){
         return false;
@@ -38,5 +38,7 @@ var prime_number_of_divisors = function(n) {
         }
     });
 
-    return is_prime(resultSum);
+    return isPrime(resultSum);
 };
+
+exports.primeNumberOfDivisors = primeNumberOfDivisors;
