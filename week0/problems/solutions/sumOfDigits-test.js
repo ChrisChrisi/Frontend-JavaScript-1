@@ -1,6 +1,21 @@
 "use strict";
 
-var sum_of_digits = require("./sumDigits").sumOfDigits;
+var sum_of_digits = require("./sumOfDigits").sumOfDigits;
+
+exports.testThrow = function(test){
+    test.throws = function(){
+        sum_of_digits(5.3);
+    };
+    test.done();
+};
+
+exports.testThrow = function(test){
+    test.throws = function(){
+        sum_of_digits(-9);
+    };
+    test.done();
+};
+
 
 exports.testOne = function(test){
     test.equal(43,sum_of_digits(1325132435356));
