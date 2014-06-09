@@ -1,9 +1,7 @@
 // solution here
 var allVowels = "aeiouy";
 
-//haystack.indexOf(needle) >= 0
-
-var count_vowels = function(str){
+var vowelsInAString= function(str){
     if(typeof str !== "string"){
         throw new TypeError("The input should be string");
     }
@@ -18,3 +16,5 @@ var count_vowels = function(str){
     });
     return result;
 };
+
+exports.vowelsInAString = vowelsInAString;
