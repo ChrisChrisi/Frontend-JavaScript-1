@@ -1,6 +1,6 @@
 // solution here
 
-var is_increasing = function (seq) {
+var isIncreasing = function (seq) {
     if(!Array.isArray(seq)){
         throw new TypeError('Invalid parameter');
     }
@@ -8,3 +8,5 @@ var is_increasing = function (seq) {
         return a >= seq[i + 1];
     }));
 };
+
+exports.isIncreasing = isIncreasing;
