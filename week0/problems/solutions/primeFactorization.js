@@ -50,7 +50,7 @@ var isPrime = function (n) {
 };
 
 var primeFactorization = function (num) {
-    throwIntegerError(num);
+    throwPositiveIntegerError (num);
     if (isPrime(num)) {
         return [
             [num, 1]
