@@ -24,4 +24,4 @@ var isNumberBalanced = function(n) {
     return (firstNum === secondNum);
 }
 
-console.log(is_number_balanced(-121));
+exports.isNumberBalanced = isNumberBalanced;
