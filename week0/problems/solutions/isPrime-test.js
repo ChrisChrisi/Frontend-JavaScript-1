@@ -1,3 +1,8 @@
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+ */
+
 "use strict";
 
 var isPrime = require("./isPrime").isPrime;
@@ -5,21 +10,21 @@ var isPrime = require("./isPrime").isPrime;
 exports.testIsPrimeThrow = function (test) {
     test.throws = function () {
         isPrime("sdgfdgh");
-    }
+    };
     test.done();
 };
 
 exports.testIsPrimeThrow1 = function (test) {
     test.throws = function () {
         isPrime([1, 3]);
-    }
+    };
     test.done();
 };
 
 exports.testIsPrimeThrow2 = function (test) {
     test.throws = function () {
         isPrime(2.3);
-    }
+    };
     test.done();
 };
 
