@@ -1,6 +1,12 @@
 // solution here
-var isIntPalindrome = function(n) {
+var isIntPalindrom = function(n) {
+    if(typeof n !== "number" || n%1 !==0){
+        throw new TypeError("The input should be integer.");
+    }
     var  numArray = n.toString().split("");
+    if(numArray[0] === "-"){
+        numArray.shift();
+    }
     var dcount = numArray.length;
     var del1 = parseInt(dcount/2);
     var del2;
@@ -15,3 +21,5 @@ var isIntPalindrome = function(n) {
 
     return firstHalf.sort().toString() === secondHalf.sort().toString();
 };
+
+exports.isIntPalindrom = isIntPalindrom;
