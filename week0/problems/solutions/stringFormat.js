@@ -1,5 +1,5 @@
 // solution here
-var format = function (string, dict) {
+var stringFormat = function (string, dict) {
     if(typeof string !== "string" || typeof dict !== "object"){
         throw new TypeError("The first argument should be string, the second dictionary ");
     }
@@ -15,7 +15,5 @@ var format = function (string, dict) {
 
     return string;
 };
-var dict = {
-    "lang" : "JavaScript",
-    "thing": "language"
-};
+
+exports.stringFormat = stringFormat;
