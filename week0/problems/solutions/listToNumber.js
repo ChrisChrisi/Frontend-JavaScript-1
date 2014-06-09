@@ -1,5 +1,5 @@
 // solution here
-var list_to_number = function(digits){
+var listToNumber = function(digits){
     if(!Array.isArray(digits)){
        throw new TypeError("the argument should be array");
     }
@@ -9,7 +9,14 @@ var list_to_number = function(digits){
     })){
         throw new TypeError("the array's elements should be integer number");
     }
-    return digits.reduce(function(a, b){
+  if(digits.length < 1){
+      return 0;
+  }
+  var result = digits.reduce(function(a, b){
         return a.toString() + b.toString();
     });
+    result = parseInt(result);
+    return result;
 };
+
+exports.listToNumber = listToNumber;
