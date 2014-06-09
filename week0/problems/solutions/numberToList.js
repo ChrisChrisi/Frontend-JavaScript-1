@@ -1,11 +1,19 @@
-// solution here
-var numberToList = function(n){
-    if(typeof n != "number" || n%1 !== 0|| n <0){
-        throw new TypeError("the argument positive integer");
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+ */
+
+var numberToList = function (n) {
+    if (typeof n != "number" || n % 1 !== 0 || n < 0) {
+        throw new TypeError("The argument should be positive integer.");
     }
-    var result = n.toString().split("");
-    result = result.map(function(a){ return parseInt(a);});
-    return result;
+
+    return n
+        .toString()
+        .split("")
+        .map(function (a) {
+            return parseInt(a);
+        });
 
 };
 
