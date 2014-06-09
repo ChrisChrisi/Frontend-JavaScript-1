@@ -1,11 +1,9 @@
 // map, filter, reduce, any, all
-// map, filter, reduce, any, all
 var map = function(f, arr){
     if(!Array.isArray(arr)){
-        throw new TypeError("The second argument should be string!");
+        throw new TypeError("The second argument should be array!");
     }
-    var result = []
-    //return f(arr[i], i, arr);
+    var result = [];
     arr.forEach (function( a,i){
         result.push(f(a, i));
     });
@@ -14,7 +12,7 @@ var map = function(f, arr){
 
 var filter = function(pred,arr){
     if(!Array.isArray(arr)){
-        throw new TypeError("The second argument should be string!");
+        throw new TypeError("The second argument should be array!");
     }
 
     var result = [];
@@ -26,9 +24,10 @@ var filter = function(pred,arr){
     return result;
 };
 
-var reduce =  function(arr,f, first){
-    if(!Array.isArray(arr)){
-        throw new TypeError("The first argument should be string!");
+var reduce =  function(f,arr, first){
+
+    if(!Array.isArray(arr) || arr.length < 1){
+        throw new TypeError("The second argument should be not empty array!");
     }
     if(typeof first != 'undefined'){
         accumulate = first;
@@ -45,7 +44,7 @@ var reduce =  function(arr,f, first){
 
 var any  = function(f, arr){
     if(!Array.isArray(arr)){
-        throw new TypeError("The second argument should be string!");
+        throw new TypeError("The second argument should be array!");
     }
     var i = 0;
     var n = arr.length;
@@ -73,3 +72,8 @@ var all  = function(f, arr){
     return true;
 };
 
+exports.map = map;
+exports.filter = filter;
+exports.reduce = reduce;
+exports.any = any;
+exports.all = all;
