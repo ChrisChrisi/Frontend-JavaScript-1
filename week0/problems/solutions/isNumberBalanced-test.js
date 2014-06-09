@@ -1,3 +1,8 @@
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+*/
+
 "use strict";
 
 var isNumberBalanced = require("./isNUmberBalanced").isNumberBalanced;
